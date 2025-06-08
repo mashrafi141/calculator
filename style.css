@@ -1,0 +1,118 @@
+/* Reset & Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #dfe9f3, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Title */
+.container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Calculator Body */
+.calculator {
+  background: #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Expression Display */
+.expression {
+  font-size: 0.9em;
+  color: #666;
+  background: #f3f3f3;
+  text-align: right;
+  padding: 8px 20px 0;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* Main Display */
+.display {
+  background: #f3f3f3;
+  color: #000;
+  font-size: 2.5em;
+  text-align: right;
+  padding: 10px 20px;
+  overflow-x: auto;
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2em;
+  background: #fafafa;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
+
+/* Colored Buttons */
+button:nth-child(4n) {
+  background: #fcb900;
+  color: #fff;
+}
+
+button:last-child {
+  background: #1e88e5;
+  color: white;
+}
+
+/* Footer */
+footer {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  .container {
+    padding: 10px;
+  }
+
+  .calculator {
+    width: 100%;
+  }
+
+  button {
+    padding: 16px;
+    font-size: 1em;
+  }
+
+  .display {
+    font-size: 2em;
+  }
+}
